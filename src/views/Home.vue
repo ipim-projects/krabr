@@ -27,10 +27,10 @@ export default {
   data() {
     return {
       options: {
-        question: 'Кого бы вы хотели видеть принимающей стороной КРаБР-2022?',
+        question: 'Какое подразделение вы хотели бы видеть принимающей стороной КРаБР-2022?',
         answers: [
           {value: 1, text: 'РЦР Томск', votes: 53},
-          {value: 2, text: 'РЦР Рязань', votes: 35},
+          {value: 2, text: 'РЦР Москва', votes: 35},
           {value: 3, text: 'РЦТиКК', votes: 30},
           {value: 4, text: 'РЦР Пермь', votes: 10}
         ]

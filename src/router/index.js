@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home'
 import News from "@/views/News";
 import History from "@/views/History";
+import Gallery from "@/views/Gallery";
 import FAQ from "@/views/FAQ";
 
 Vue.use(VueRouter)
@@ -34,7 +35,7 @@ const routes = [
   {
     path: '/gallery',
     name: 'Gallery',
-    component: Home
+    component: Gallery
   },
   {
     path: '/faq',
