@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '@/views/Home'
+import News from "@/views/News";
+import History from "@/views/History";
+import FAQ from "@/views/FAQ";
 
 Vue.use(VueRouter)
 
@@ -11,6 +14,11 @@ const routes = [
     component: Home
   },
   {
+    path: '/news',
+    name: 'News',
+    component: News
+  },
+  {
     path: '/events',
     name: 'Events',
     // route level code-splitting
@@ -19,10 +27,20 @@ const routes = [
     component: () => import(/* webpackChunkName: "events" */ '../views/Events.vue')
   },
   {
-    path: '/',
+    path: '/history',
+    name: 'History',
+    component: History
+  },
+  {
+    path: '/gallery',
     name: 'Gallery',
     component: Home
   },
+  {
+    path: '/faq',
+    name: 'FAQ',
+    component: FAQ
+  }
 ]
 
 const router = new VueRouter({

@@ -78,14 +78,29 @@ export default {
       },
       {
         icon: 'mdi-file',
+        title: 'Новости',
+        link: '/news'
+      },
+      {
+        icon: 'mdi-file',
         title: 'Мероприятия',
         link: '/events'
+      },
+      {
+        icon: 'mdi-file',
+        title: 'О предыдущих КРаБР',
+        link: '/history'
       },
       {
         icon: 'mdi-folder-multiple-image',
         title: 'Галерея',
         link: '/gallery'
-      }
+      },
+      {
+        icon: 'mdi-file',
+        title: 'FAQ',
+        link: '/faq'
+      },
     ]
   })
 };
