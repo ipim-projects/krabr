@@ -104,6 +104,11 @@ export default {
         title: 'FAQ',
         link: '/faq'
       },
+      {
+        icon: 'mdi-camera-iris',
+        title: 'Выбиратор',
+        link: '/generator'
+      }
     ]
   })
 };

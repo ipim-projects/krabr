@@ -35,11 +35,12 @@ export default {
       options: {
         question: 'Какое подразделение вы хотели бы видеть принимающей стороной КРаБР-2022?',
         answers: [
-          {value: 1, text: 'РЦР Томск', votes: 53},
-          {value: 2, text: 'РЦР Москва', votes: 35},
-          {value: 3, text: 'РЦТиКК', votes: 30},
-          {value: 4, text: 'РЦР Казантип', votes: 156},
-          {value: 5, text: 'РЦР Пермь', votes: 10}
+          {value: 1, text: 'РЦР Москва', votes: 35},
+          {value: 2, text: 'РЦР Санкт-Петербург', votes: 53},
+          {value: 3, text: 'РЦР Екатеринбург', votes: 30},
+          {value: 4, text: 'РЦР Казань', votes: 30},
+          {value: 5, text: 'РЦР Казантип', votes: 156},
+          {value: 6, text: 'РЦТиКК', votes: 10}
         ]
       }
     }

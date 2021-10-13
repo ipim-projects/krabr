@@ -5,6 +5,7 @@ import News from "@/views/News";
 import History from "@/views/History";
 import Gallery from "@/views/Gallery";
 import FAQ from "@/views/FAQ";
+import Generator from "@/views/Generator";
 
 Vue.use(VueRouter)
 
@@ -41,6 +42,11 @@ const routes = [
     path: '/faq',
     name: 'FAQ',
     component: FAQ
+  },
+  {
+    path: '/generator',
+    name: 'Generator',
+    component: Generator
   }
 ]
 
