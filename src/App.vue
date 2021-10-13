@@ -1,19 +1,19 @@
 <template>
   <v-app>
     <v-app-bar
-      app
-      color="primary"
-      dark
+        app
+        color="primary"
+        dark
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="@/assets/logo.png"
-          transition="scale-transition"
-          width="40"
+            alt="Vuetify Logo"
+            class="shrink mr-2"
+            contain
+            src="@/assets/logo.png"
+            transition="scale-transition"
+            width="40"
         />
         <v-toolbar-title>КРаБР</v-toolbar-title>
       </div>
@@ -21,9 +21,9 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+          href="https://github.com/vuetifyjs/vuetify/releases/latest"
+          target="_blank"
+          text
       >
         <span class="mr-2">Latest Release</span>
         <v-icon>mdi-open-in-new</v-icon>
