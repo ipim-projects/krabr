@@ -78,17 +78,17 @@ export default {
         link: '/'
       },
       {
-        icon: 'mdi-file',
+        icon: 'mdi-newspaper',
         title: 'Новости',
         link: '/news'
       },
       {
-        icon: 'mdi-file',
+        icon: 'mdi-access-point',
         title: 'Мероприятия',
         link: '/events'
       },
       {
-        icon: 'mdi-file',
+        icon: 'mdi-history',
         title: 'О предыдущих КРаБР',
         link: '/history'
       },
@@ -98,7 +98,7 @@ export default {
         link: '/gallery'
       },
       {
-        icon: 'mdi-file',
+        icon: 'mdi-comment-question-outline',
         title: 'FAQ',
         link: '/faq'
       },
