@@ -3,7 +3,7 @@
       class="text-center"
       cols="12"
   >
-    {{ new Date().getFullYear() }} — <strong>Крабр</strong>
+    {{ new Date().getFullYear() }} — <strong>ЦК6</strong>
   </v-col>
 </template>
 

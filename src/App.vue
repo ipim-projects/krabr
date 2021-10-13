@@ -40,11 +40,11 @@
       <v-spacer></v-spacer>
 
       <v-btn
-          href="https://github.com/vuetifyjs/vuetify/releases/latest"
+          href="https://cbr.ru"
           target="_blank"
           text
       >
-        <span class="mr-2">Ссылка</span>
+        <BankLogo class="logo"/>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
@@ -61,12 +61,14 @@
 
 <script>
 import Footer from "@/components/Footer";
+import BankLogo from '@/assets/10andmore.svg'
 
 export default {
   name: 'App',
 
   components: {
     Footer,
+    BankLogo
   },
 
   data: () => ({
@@ -106,3 +108,11 @@ export default {
   })
 };
 </script>
+
+<style scoped>
+.logo {
+  width: 322px;
+  height: 196px;
+  fill: white;
+}
+</style>
