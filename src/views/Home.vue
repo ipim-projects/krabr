@@ -1,16 +1,46 @@
 <template>
-  <div>
-    <v-img
-        src="../assets/logo.png"
-        class="my-3"
-        contain
-        height="200"
-    />
-  </div>
+  <v-row justify="center">
+    <v-col md="4">
+      <div>
+        <v-img
+            src="../assets/logo.png"
+            class="my-3"
+            contain
+            height="200"
+        />
+      </div>
+      <div>
+        <vue-poll v-bind="options" @addvote="addVote"/>
+      </div>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
+import VuePoll from 'vue-poll'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    VuePoll
+  },
+  data() {
+    return {
+      options: {
+        question: 'Кого бы вы хотели видеть принимающей стороной КРаБР-2022?',
+        answers: [
+          {value: 1, text: 'РЦР Томск', votes: 53},
+          {value: 2, text: 'РЦР Рязань', votes: 35},
+          {value: 3, text: 'РЦТиКК', votes: 30},
+          {value: 4, text: 'РЦР Пермь', votes: 10}
+        ]
+      }
+    }
+  },
+  methods: {
+    addVote(obj) {
+      console.log('You voted ' + obj.text + '!');
+    }
+  }
 }
 </script>

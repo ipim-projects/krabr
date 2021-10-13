@@ -1,11 +1,30 @@
 <template>
   <v-app>
+    <v-navigation-drawer
+        v-model="drawer"
+        app
+    >
+      <v-list
+          nav
+          dense
+      >
+        <v-list-item v-for="item in menuItems" :key="item.title" :to="item.link" exact>
+          <v-list-item-action>
+            <v-icon v-text="item.icon"></v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title class="text-wrap" v-text="item.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
     <v-app-bar
         app
         color="primary"
         dark
     >
-      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <div class="d-flex align-center">
         <v-img
             alt="Vuetify Logo"
@@ -30,31 +49,13 @@
       </v-btn>
     </v-app-bar>
 
-    <v-navigation-drawer
-        v-model="drawer"
-        absolute
-        temporary
-    >
-      <v-list
-          nav
-          dense
-      >
-        <v-list-item v-for="item in menuItems" :key="item.title" :to="item.link" exact>
-          <v-list-item-action>
-            <v-icon v-text="item.icon"></v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title class="text-wrap" v-text="item.title"></v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
     <v-main>
       <router-view/>
     </v-main>
 
-    <Footer/>
+    <v-footer app color="primary" padless>
+      <Footer/>
+    </v-footer>
   </v-app>
 </template>
 
@@ -69,7 +70,7 @@ export default {
   },
 
   data: () => ({
-    drawer: false,
+    drawer: null,
     menuItems: [
       {
         icon: 'mdi-home',
