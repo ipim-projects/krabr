@@ -39,29 +39,19 @@
           nav
           dense
       >
-        <v-list-item-group
-            v-model="group"
-            active-class="deep-purple--text text--accent-4"
-        >
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-home</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Главная</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-file</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Мероприятия</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
+        <v-list-item v-for="item in menuItems" :key="item.title" :to="item.link" exact>
+          <v-list-item-action>
+            <v-icon v-text="item.icon"></v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title class="text-wrap" v-text="item.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
     <v-main>
-      <router-view />
+      <router-view/>
     </v-main>
 
     <Footer/>
@@ -79,19 +69,22 @@ export default {
   },
 
   data: () => ({
-    drawer: true,
-    items: [
+    drawer: false,
+    menuItems: [
       {
-        action: 'local_activity',
-        title: 'Attractions',
-        path: '/',
-        items: [],
+        icon: 'mdi-home',
+        title: 'Главная',
+        link: '/'
       },
       {
-        action: 'restaurant',
-        title: 'Breakfast',
-        path: '/breakfast',
-        items: []
+        icon: 'mdi-file',
+        title: 'Мероприятия',
+        link: '/events'
+      },
+      {
+        icon: 'mdi-folder-multiple-image',
+        title: 'Галерея',
+        link: '/gallery'
       }
     ]
   })
