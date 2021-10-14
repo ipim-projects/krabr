@@ -1,16 +1,18 @@
 <template>
   <v-container>
-
-    <v-row justify="center">
-      <v-img
-          src="../assets/logo.png"
-          class="my-3"
-          contain
-          height="200"
-      />
-    </v-row>
-    <v-row justify="center">
-      <p class="text-h4 text-center">Конференция разработчиков Банка России</p>
+    <v-row justify="start" no-gutters>
+      <v-col md="4">
+        <v-img src="@/assets/krabr2021.jpg"/>
+      </v-col>
+      <v-col md="8">
+        <p class="text-h4 text-center">Конференция разработчиков Банка России</p>
+        <v-img
+            src="../assets/logo.png"
+            class="my-3"
+            contain
+            height="200"
+        />
+      </v-col>
     </v-row>
     <v-row justify="center">
       <v-col md="6">
