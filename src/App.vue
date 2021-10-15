@@ -106,7 +106,7 @@ export default {
       },
       {
         icon: 'mdi-camera-iris',
-        title: 'Выбиратор',
+        title: 'Следующий КРаБР',
         link: '/generator'
       }
     ]
