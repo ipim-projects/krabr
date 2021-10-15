@@ -1,8 +1,7 @@
 <template>
   <v-container>
-    <p class="text-h4"><span class="text-decoration-line-through">Вибратор</span> Выбиратор крабровведения</p>
-    <p class="text-h6">Рандомно выбран для крабровведения: <strong class="green--text">{{ newKrabr }}</strong></p>
-    <p class="caption">Следующая процедура крабровведения состоится следуюшему пациенту :)</p>
+    <p class="text-h4">Определитель места проведения следующего КРаБР</p>
+    <p class="text-h6">Следующей площадкой для проведения КРаБР выбран: <strong class="green--text">{{ newKrabr }}</strong></p>
   </v-container>
 </template>
 
@@ -16,9 +15,9 @@ export default {
         'РЦР Екатеринбург',
         'РЦР Казань',
         'РЦР Казантип',
-        'РЦРТиКК'
+        'РЦРТиКК Санкт-Петербург'
       ];
-      const rand = Math.round(5 * Math.random());
+      const rand = Math.floor(Math.random() * rcr.length);
       return rcr[rand];
     }
   }
